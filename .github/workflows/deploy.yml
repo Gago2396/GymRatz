@@ -1,0 +1,26 @@
+name: Deploy to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout código
+        uses: actions/checkout@v3
+
+      - name: Deploy on Server
+        uses: appleboy/ssh-action@v0.1.10
+        with:
+          host: "teamcacahuete.ddns.net"
+          username: "alberto"
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            cd /home/alberto/GymRatz
+            git pull origin main
+            ./mvnw clean package
+            sudo systemctl restart tomcat
