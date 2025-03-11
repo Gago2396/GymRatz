@@ -1,0 +1,35 @@
+# Java y Maven/Gradle
+target/
+*.jar
+*.war
+*.ear
+*.class
+*.log
+*.iml
+.idea/
+*.ipr
+*.iws
+.DS_Store
+*.swp
+*~
+
+# Spring Boot
+.env
+application.properties
+application.yml
+/secret/
+.vscode/
+
+# Archivos de dependencias
+node_modules/
+build/
+out/
+
+# Lombok y Eclipse
+.lombok.config
+*.factorypath
+
+# Git y sistema operativo
+*.tmp
+*.lock
+

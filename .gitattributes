@@ -1,0 +1,12 @@
+# Unix/Linux
+*.sh text eol=lf
+/mvnw text eol=lf
+
+# Windows
+*.cmd text eol=crlf
+*.bat text eol=crlf
+
+# Format
+*.md text eol=lf
+*.yml text eol=lf
+*.json text eol=lf
